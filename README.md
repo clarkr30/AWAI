@@ -1,2 +1,3 @@
-# Jelly-Chatbot
+# Awabot
 Jelly Hoshiumi Chatbot
+Maybe also chat
