@@ -1,3 +1,2 @@
-# Awabot
-Jelly Hoshiumi Chatbot
-Maybe also chat
+# AWAI
+thing :)
