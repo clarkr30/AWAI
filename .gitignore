@@ -1,2 +1,5 @@
-# Ignore Streams folder
+# Ignore venv directory
+/.venv
+
+# Ignore Streams directory
 /Streams
