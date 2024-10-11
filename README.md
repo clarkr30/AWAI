@@ -9,7 +9,7 @@ Today's victim:
 
 Note: I have no idea what I am doing and have no experience working with Large Language Models. This project is meant to be a learning experience for me to learn about this area.
 
-Note 2: Also, development is in very early stages, so this README will contain my incoherent notes and ramblings until it is more fleshed out. If you are not me you probably shouldn't be here right now anyways, but if you somehow stumble upon this, my discord handle is @bepisbola. Feel free to contact me, I would appreciate any feedback, ideas, or friends that want to come my way.
+Note 2: Also, development is in very early stages, so this README will contain my incoherent notes and ramblings until it is more fleshed out. If you are not me you probably shouldn't be here right now anyways, but if you do somehow stumble upon this, my discord handle is @bepisbola. Feel free to contact me, I would appreciate any feedback, ideas, or friends that want to come my way.
 
 ## Training Plan
 The plan for training is to continue training a preexisting LLM on the transcripts of some streams and then later on, finetune the model using prompt response pairs taken from the transcript and live chat of other streams.
@@ -17,7 +17,7 @@ The plan for training is to continue training a preexisting LLM on the transcrip
 ## Data Organization
 For now, we are using yt-dlp to go through every vod on a channel and download the vod, automatically generated subtitles, and live chat logs. From the downloaded streams, we will split them into 3 subsections. For now, all of the training data will be text.
 
-1. Collab/Karaoke/Games with dialogue/Reactions - Data to be ignored. The transcripts in these streams include data that may interfere with training.
+1. Collab/Karaoke/Games with dialogue/Reactions - Data to be ignored. The transcripts in these streams include data from sources that are not the streamer, which may interfere with training.
 
 2. Solo gaming/activity/presentation/etx streams - The transcripts from these streams can be used for training, but since the streamer is reacting to chat as well as the game/activity/presentation/etc, we can't generate prompt/response pairs based on just the text. However, this data should still be good, so we will use the transcripts of these streams for unsupervised training.
 
