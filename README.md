@@ -5,6 +5,8 @@ Today's victim:
 
 ![jelly](https://github.com/user-attachments/assets/05f33d80-6d31-4fff-bb23-541cd4f5bcba)
 
+(she said I'm allowed to: ![proof](https://youtube.com/shorts/Gbg7tMGapSk?si=n-5aOienEQvvmvYG))
+
 Note: I have no idea what I am doing and have no experience working with Large Language Models. This project is meant to be a learning experience for me to learn about this area.
 
 Note 2: Also, development is in very early stages, so this README will contain my incoherent notes and ramblings until it is more fleshed out. If you are not me you probably shouldn't be here right now anyways, but if you somehow stumble upon this, my discord handle is @bepisbola. Feel free to contact me, I would appreciate any feedback, ideas, or friends that want to come my way.
