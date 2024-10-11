@@ -2,6 +2,7 @@
 Trapping the consciousness of a Vtuber into a Large Language Model
 
 Today's victim:
+
 ![jelly](https://github.com/user-attachments/assets/05f33d80-6d31-4fff-bb23-541cd4f5bcba)
 
 Note: I have no idea what I am doing and have no experience working with Large Language Models. This project is meant to be a learning experience for me to learn about this area.
