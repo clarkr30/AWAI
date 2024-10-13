@@ -1,0 +1,1 @@
+ollama run llama3.2 "Reformat this transcript into distint and coherent sentences with proper grammar and punctuation, putting each distinct sentence on a new line. Please do your best with adding punctuation like commas. Also, just give me the reformatted transcript without telling me 'Here is the reformatted transcript'" < cut_transcript.txt >> cut_response.txt
