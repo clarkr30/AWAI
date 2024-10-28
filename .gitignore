@@ -3,3 +3,6 @@
 
 # Ignore Streams directory
 /Streams
+
+# Ignore Whisper/AduioData
+/Whisper/AduioData
