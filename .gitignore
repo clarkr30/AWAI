@@ -6,3 +6,6 @@
 
 # Ignore Whisper/AduioData
 /Whisper/AudioData
+
+# Ignore funnybits
+/funnybits.txt
