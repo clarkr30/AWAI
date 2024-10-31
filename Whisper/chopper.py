@@ -1,7 +1,8 @@
 from pydub import AudioSegment
 import math
 
-filePath = "Whisper/AudioData/full/EP._16_-_nearing_the_end_of_an_era [Tz0xSdrEfTc].f140.m4a"
+# filePath = "Whisper/AudioData/full/EP._16_-_nearing_the_end_of_an_era [Tz0xSdrEfTc].f140.m4a"
+filePath = "Streams/20240216 - EP._16_-_nearing_the_end_of_an_era/EP._16_-_nearing_the_end_of_an_era [Tz0xSdrEfTc].f140.m4a"
 targetDir = "Whisper/AudioData/chopped"
 
 fullAudio = AudioSegment.from_file(filePath, "m4a")
@@ -14,7 +15,7 @@ print(total_segs)
 print("starting to chop")
 
 for i in range(total_segs):
-    print("chopping" + str(i))
+    print("chopping " + str(i))
     beginning = i * interval
     end = (i + 1) * interval
     split_audio = fullAudio[beginning:end]
