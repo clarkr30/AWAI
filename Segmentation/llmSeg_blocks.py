@@ -3,23 +3,28 @@ from sentence_transformers import SentenceTransformer
 from itertools import islice
 from utils import window, get_depths, get_local_maxima, get_threshold_segments, compute_threshold
 from sklearn.metrics.pairwise import cosine_similarity
+import re
 
 MODEL_STR = "sentence-transformers/all-MiniLM-L6-v2"
 model = SentenceTransformer(MODEL_STR)
 
 nlp = spacy.load('en_core_web_sm')
 
-with open('Whisper/AudioData/transcript/zatsuTranscript.txt') as f:
+with open('Whisper/AudioData/transcript/zatsuSegments.txt') as f:
     text = f.read()
     sents = []
     doc = nlp(text)
     i = 0
     for sent in doc.sents:
         sents.append(sent)
-        # print(sent)
-        # print(i)
-    
-WINDOW_SIZE = 3
+        print(sent)
+        print(i)
+        i += 1
+
+with open('Whisper/AudioData/transcript/zatsuSegments.txt') as f:
+    sentsStripped = [line.rstrip() for line in f]
+
+WINDOW_SIZE = 5
 window_sent = list(window(sents, WINDOW_SIZE))
 window_sent = [' '.join([sent.text for sent in window]) for window in window_sent]
 
@@ -33,14 +38,16 @@ threshold = compute_threshold(filtered_scores)
 segments_ids = get_threshold_segments(filtered_scores, threshold)
 # print(threshold)
 # print(segments_ids)
+print(len(sents))
+print(len(sentsStripped))
 
-with open("Segmentation/zatsuOutput_noMarkers.txt", "w") as f:
+with open("Segmentation/zatsuOutput_Segs.txt", "w") as f:
     segIndex = 0
     for i in range(len(sents)):
         if i == segments_ids[segIndex]:
-            # f.write("\n<NEW_TOPIC>\n")
+            f.write("\n<NEW_TOPIC>\n")
             f.write("\n")
             if(segIndex < len(segments_ids) - 1):
                 segIndex += 1
                 # print(segIndex)
-        f.write(str(sents[i]) + " ")
+        f.write(str(sents[i]))

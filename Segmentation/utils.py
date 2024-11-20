@@ -1,5 +1,6 @@
 from itertools import islice
 import numpy as np
+from scipy.signal import argrelmax
 
 # Sliding window function
 def window(seq, n=3):
@@ -49,9 +50,6 @@ def get_depths(scores):
         depths.append(depth)
         
     return np.array(depths)
-
-
-from scipy.signal import argrelmax
 
 # Filter out local maxima
 def get_local_maxima(depth_scores, order=1):
