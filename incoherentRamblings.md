@@ -45,3 +45,9 @@ Well I have something now, although it's not really good. I have a thing that ta
 
 ## 11-20-2024
 At this point I'm desperate lol. The text segmentation I had before does a pretty good job already, although it's sometimes off by a sentence or 2 and still sometimes separates what should be 1 chunk into multiple, but it's better than anything else I've tried. I might just get the timestamp from the whole transcript, find the corresponding chunk, find the similarities between the chat message and the surrounding chunks, and just use whatever is similar. That's for me to do some other time though. I haven't pushed to the github repo in a while, so I should probably do that now
+    
+## 11-22-2024
+What if I used collab streams to get prompt/response pairs? If there is a way to get the transcript of those streams and differentiate between who is talking, this could work. After all, collab streams are just multiple people holding a conversation. Additionally, if possible, I think the quality of the data will be better than getting the pairs off supas and if things go right, it might even be easier than getting them off supas. Some considerations for potential problems might include knowing which speaker is the one I want, dealing with 2 people speaking at the same time, and making sure prompts and responses are from the appropiate people. A good starting point for this could be Speaker diarization with speech to text. Also worth watching a few collab streams to get a better idea of how I can best collect the data. Worst case scenario, I do everything by hand. Finding something to do diarization that works is proving to be a bit difficult. I have gotten nowhere today.
+
+## 1-8-2025
+Happy New Year! This project is dead as I have realized getting AI to do the chat segmentation is too unreliable and I don't want to do this by hand. Maybe I'll come back to this, maybe not, but this project is on hold until I have an idea that can solve these problems.
